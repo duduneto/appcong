@@ -6,8 +6,8 @@ function desabilitaFim(){
 
   }
 }
-$(document).ready(function () {
-   $('.datas').mask('99-99-9999');
+ $(document).ready(function () {
+    $('.datas').mask('99-99-9999');
    return false;
 
 });

@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Território</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="icon" href="favicon.png">
@@ -13,7 +14,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" >
       <a class="navbar-brand" href="index.php">Controle de Territorio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

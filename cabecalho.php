@@ -6,7 +6,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 <?php require_once("banco-territorio.php"); ?>
 <?php require_once("banco-usuario.php"); ?>
 <?php require_once("logica-usuario.php"); ?>
-<?php require_once("mostra-alerta.php"); ?>
+
 <?php
 verificaUsuario();
 

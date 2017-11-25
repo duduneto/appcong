@@ -2,7 +2,7 @@
 <?php require_once("mostra-alerta.php"); ?>
 <?php
 
-mostraAlerta();
+
 
 ?>
 

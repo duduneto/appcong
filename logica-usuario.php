@@ -4,7 +4,9 @@
 session_start();
 
 function loginError(){
-  return setcookie("login-error",true);
+  header("Location:form-login.php?login=false");
+  die();
+  // return setcookie("login-error",true);
 }
 
 function logaUsuario($usuario){
@@ -19,8 +21,8 @@ function usuarioLogado(){
 function verificaUsuario(){
   if (!usuarioLogado()){
     loginError();
-    header("Location:form-login.php");
-    die();
+    // header("Location:form-login.php?login=false");
+    // die();
 
   }
 }

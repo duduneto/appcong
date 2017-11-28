@@ -1,6 +1,7 @@
 <?php require_once("cabecalho.php"); ?>
 <?php require_once("banco-territorio.php"); ?>
 <?php
+// numero do territorio é colocado na variavel $territorio
 $territorio = $_POST['numeroTerritorio'];
 ?>
 <div class="form-group float-left">
@@ -25,6 +26,7 @@ $territorio = $_POST['numeroTerritorio'];
     <label for="dirigente">Territorio Dirigido por:</label>
     <input class="form-control" type="text" name="dirigente" placeholder="Dirigido por:">
   </div>
+  <!-- Input com o número do território -->
   <input type="hidden" name="numeroTerritorio" value="<?=$territorio?>">
   <button type="submit" class="btn btn-primary">Registrar</button>
 </form>

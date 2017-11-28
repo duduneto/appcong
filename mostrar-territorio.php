@@ -2,8 +2,10 @@
 <?php require_once("conecta.php"); ?>
 <?php require_once("banco-territorio.php"); ?>
 <?php
+// Vamos ler o Cookie com o numero do território e colocar na variavel $territorio.
 $territorio = $_COOKIE['cookieNumTer'];
-
+// Com o Cookie em "mãos" vamos fazer uma busca por todas as informações do territorio.
+// Que irá nos retornar um array que será colocado na variavel $territorioArray;
 $territorioArray = buscaTerritorio($conexao,$territorio);
 
 ?>
@@ -22,6 +24,9 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
     </tr>
   </thead>
   <tbody>
+    <!-- Vou colocar a Array em outra variavel com todos os campos definidos com nome de $territorioA
+          Cada campo do território vai popular a tabela
+    -->
     <?php while($territorioA = mysqli_fetch_array($territorioArray)){ ?>
     <?php #var_dump($territorioA); ?>
     <tr>
@@ -73,29 +78,23 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
 </div>
 <?php $territorio = $_COOKIE['cookieNumTer'];
 ?>
-<!--<div class="float-right">
-  <button type="button" class="btn btn-primary" id="btn">Mostrar Territorio</button>
-</div>-->
+<!-- Esse botão irá levar o usuário para uma página para adicionar um novo Registro de Territorio -->
 <div class="btn btn-group ">
-  <form class="" action="adicionar-registro.php" method="post">
+  <!-- O numero do território é passado via metodo post do formulário abaixo -->
+  <form class="" action="adicionar-registro.php" method="post"> <!--Esse metodo -->
     <input type="hidden" name="numeroTerritorio" value="<?=$territorio?>">
     <button class="btn btn-primary"type="submit" name="button">Adicionar Registro</button>
   </form>
 </div>
-<!--<div id="modau" class="modal modal-fade" style="display:none">
-  <figure class="figure figure-img img-responsive">
-    <img class="img-fluid " id="imagemterritorio" src="img/territorio<?=$territorio?>.png">
-    <figcaption class="figure-caption">Territorio <?=$territorio?>.</figcaption>
-  </figure>
-</div>-->
+
 <div>
 
-
+<!-- Temos aqui um Botão Trigger que vai ativar o Modal -->
   <button type="button" id="btnModal" class="btn btn-primary " data-toggle="modal" data-target="#meumodal" >
     Mostrar Território
   </button>
 
-  <!-- Modal -->
+  <!-- Modal com a foto do territorio -->
   <div class="modal" id="meumodal" >
     <div class="modal-dialog">
       <div class="modal-content">
@@ -106,7 +105,11 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
         <div class="modal-body">
           <div class="container">
             <figure>
+              <!-- ATENÇÃO AQUI para o Nome da Foto-->
               <img src="img/territorio<?= $territorio ?>.png" alt="Imagem do territorio <?= $territorio ?>">
+              <!-- A tag img faz apenas um src para a pasta img procurando a foto que tem como:
+                    territorio+A variavel com o numero do territorio+.png
+             -->
             </figure>
           </div>
         </div>

@@ -8,12 +8,13 @@ function loginError(){
   die();
   // return setcookie("login-error",true);
 }
-
+// Cria uma sessão que tem como nome 'usuario-logado' e seu valor é nome do usuario
+// que foi inserido no formulario de login
 function logaUsuario($usuario){
   $_SESSION['usuario_logado']=$usuario;
   setcookie("login-error",false);
 }
-
+// usuarioLogado é usado para o verificaUsuario
 function usuarioLogado(){
   return isset($_SESSION['usuario_logado']);
 }
@@ -21,8 +22,7 @@ function usuarioLogado(){
 function verificaUsuario(){
   if (!usuarioLogado()){
     loginError();
-    // header("Location:form-login.php?login=false");
-    // die();
+
 
   }
 }

@@ -6,7 +6,7 @@
 <?php
 $territorioArray = buscaTerritorioData($conexao);
 ?>
-
+<!-- Tabela que vai expor todos as últimas atividades dos Territórios. -->
 <table class="table">
   <thead class="thead-inverse">
     <tr>
@@ -17,10 +17,17 @@ $territorioArray = buscaTerritorioData($conexao);
     </tr>
   </thead>
   <tbody>
+    <!-- Quando é chamada função buscaTerritorioData ela retorna um Array e
+          enquanto houver algum valor dentro desse array ele vai excecutar a criação de <td>'s.
+          Cara campo nessa array é utilizado para preencher o <ts>.
+   -->
     <?php while ($territorioA = mysqli_fetch_array($territorioArray)){?>
 
       <tr>
         <td><?=$territorioA['numero_territorio']?></td>
+        <!-- Esse pequeno IF é feito para tratar os territórios que não foram concluídos
+              colocando um "Não Concluido" para todos que não tiveram o checkbox marcado como Concluido.
+       -->
         <?php if($territorioA['datareg'] == 0){?>
           <td class="text-danger">Não Concluido</td>
         <?php
@@ -40,5 +47,5 @@ $territorioArray = buscaTerritorioData($conexao);
 
   </tbody>
 </table>
-
+<!-- O Rodapé é só o fechamento das tags q foram abertas no Cabecalho. Ah! E alguns Scripts de Javascripts -->
 <?php require_once("rodape.php"); ?>

@@ -1,10 +1,6 @@
 <?php require_once("cabecalho-login.php"); ?>
 <?php require_once("mostra-alerta.php"); ?>
-<?php
 
-
-
-?>
 
 <form action="valida-usuario.php" method="post">
   <div class="form-group">

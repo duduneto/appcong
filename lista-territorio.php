@@ -8,10 +8,10 @@
 
     O valor 27 é pq preciso de 26 botões pois na minha Cong tem 26 territórios.
 
-    
+
     -->
 <div class="btn btn-toolbar">
-  <?php for ($i=1; $i<27 ; $i++) {?>
+  <?php for ($i=1; $i<28 ; $i++) {?>
     <div class="ml-2 mr-2">
       <form class="" action="cookear-territorio.php" method="post">
         <input type="hidden" name="numero-territorio" value="<?= $i ?>">

@@ -1,7 +1,6 @@
-<?php require_once("cabecalho.php"); ?>
-<?php require_once("conecta.php"); ?>
-<?php require_once("banco-territorio.php"); ?>
-<?php
+<?php require_once("cabecalho.php");
+require_once("conecta.php");
+require_once("banco-territorio.php");
 // Vamos ler o Cookie com o numero do território e colocar na variavel $territorio.
 $territorio = $_COOKIE['cookieNumTer'];
 // Com o Cookie em "mãos" vamos fazer uma busca por todas as informações do territorio.
@@ -27,8 +26,8 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
     <!-- Vou colocar a Array em outra variavel com todos os campos definidos com nome de $territorioA
           Cada campo do território vai popular a tabela
     -->
-    <?php while($territorioA = mysqli_fetch_array($territorioArray)){ ?>
-    <?php #var_dump($territorioA); ?>
+    <?php while($territorioA = mysqli_fetch_array($territorioArray)){?>
+
     <tr>
 
       <td id="datainicio"><?= $territorioA['data_inicio'] ?></td>
@@ -76,7 +75,8 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
   </tbody>
 </table>
 </div>
-<?php $territorio = $_COOKIE['cookieNumTer'];
+<?php
+$territorio = $_COOKIE['cookieNumTer'];
 ?>
 <!-- Esse botão irá levar o usuário para uma página para adicionar um novo Registro de Territorio -->
 <div class="btn btn-group ">
@@ -104,9 +104,9 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
         </div>
         <div class="modal-body">
           <div class="container">
-            <figure>
+            <figure class="">
               <!-- ATENÇÃO AQUI para o Nome da Foto-->
-              <img src="img/territorio<?= $territorio ?>.png" alt="Imagem do territorio <?= $territorio ?>">
+              <img class="img-fluid" src="img/territorio<?= $territorio ?>.png" alt="Imagem do territorio <?= $territorio ?>">
               <!-- A tag img faz apenas um src para a pasta img procurando a foto que tem como:
                     territorio+A variavel com o numero do territorio+.png
              -->
@@ -121,9 +121,4 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
     </div>
   </div>
 </div>
-
-
-<?php
-?>
-
 <?php require_once("rodape.php"); ?>

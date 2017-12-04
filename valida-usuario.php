@@ -10,7 +10,7 @@ $senha = $_POST['senha'];
 $usuario = buscaUsuario($conexao,$usuario,$senha);
 if ($usuario == null) {
   loginError();
-  
+
 }else{
   logaUsuario($usuario['idlogin']);
   header("Location:index.php");

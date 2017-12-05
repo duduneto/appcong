@@ -5,8 +5,10 @@
 <?php require_once("logica-usuario.php"); ?>
 <?php
 $territorioArray = buscaTerritorioData($conexao);
+$valorSessionAdm = $_SESSION['userAdm'];
 ?>
 <!-- Tabela que vai expor todos as últimas atividades dos Territórios. -->
+
 <table class="table">
   <thead class="thead-inverse">
     <tr>

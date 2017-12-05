@@ -13,6 +13,7 @@ if ($usuario == null) {
 
 }else{
   logaUsuario($usuario['idlogin']);
+  setSessionAdm($usuario['adm']);
   header("Location:index.php");
   die();
 

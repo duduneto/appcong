@@ -1,15 +1,11 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
+require_once("conecta.php");
+require_once("banco-territorio.php");
+require_once("banco-usuario.php");
+require_once("logica-usuario.php");
 
-?>
-<?php require_once("conecta.php"); ?>
-<?php require_once("banco-territorio.php"); ?>
-<?php require_once("banco-usuario.php"); ?>
-<?php require_once("logica-usuario.php"); ?>
-
-<?php
 verificaUsuario();
-
 ?>
 <html>
   <head>
@@ -37,6 +33,14 @@ verificaUsuario();
       <li class="nav-item active">
         <a class="nav-link" href="lista-territorio.php">Territórios <span class="sr-only">(current)</span></a>
       </li>
+      <?php if($_SESSION['userAdm'] == 1){?>
+        <li class="nav-item active">
+          <a class="nav-link" href="cadastra-usuario.php">Criar Conta <span class="sr-only">(current)</span></a>
+        </li>
+      <?php
+      }
+      ?>
+
     </ul>
     <div class="">
       <a href="logout.php" class="btn btn-secondary">Logout</a>

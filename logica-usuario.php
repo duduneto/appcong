@@ -22,14 +22,15 @@ function usuarioLogado(){
 function verificaUsuario(){
   if (!usuarioLogado()){
     loginError();
-
-
-  }
+    }
 }
 
 function logout(){
   return session_destroy();
 }
 
+function setSessionAdm($valorAdm){
+  $_SESSION['userAdm']=$valorAdm;
+}
 
 ?>

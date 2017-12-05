@@ -14,9 +14,9 @@ function buscaUsuario($conexao,$usuario,$senha){
 }
 
 
-function cadastraUsuario($conexao,$usuario,$senha,$nome){
+function cadastraUsuario($conexao,$usuario,$senha,$nome,$adm){
   $senhaMd5 = md5($senha);
-  $query = "INSERT INTO usuarios (nome,idlogin,senha) VALUES ('{$nome}','{$usuario}','{$senhaMd5}')";
+  $query = "INSERT INTO usuarios (nome,idlogin,senha,adm) VALUES ('{$nome}','{$usuario}','{$senhaMd5}','{$adm}')";
   return mysqli_query($conexao,$query);
 }
 ?>

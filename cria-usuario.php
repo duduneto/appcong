@@ -4,6 +4,9 @@
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 $nome = $_POST['nomeDoUsuario'];
-cadastraUsuario($conexao,$usuario,$senha,$nome);
+$adm = $_POST['adm'];
+cadastraUsuario($conexao,$usuario,$senha,$nome,$adm);
+header("Location:index.php");
+die();
 
 ?>

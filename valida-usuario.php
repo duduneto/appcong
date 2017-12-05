@@ -14,6 +14,7 @@ if ($usuario == null) {
 }else{
   logaUsuario($usuario['idlogin']);
   setSessionAdm($usuario['adm']);
+  setSessionUserId($usuario['id']);
   header("Location:index.php");
   die();
 

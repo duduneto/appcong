@@ -3,6 +3,7 @@
 <?php
 // numero do territorio é colocado na variavel $territorio
 $territorio = $_POST['numeroTerritorio'];
+$userId = $_SESSION['userId'];
 ?>
 <div class="form-group float-left">
   <form action="atualiza-registro.php" name="formAdd" method="post">
@@ -28,6 +29,7 @@ $territorio = $_POST['numeroTerritorio'];
   </div>
   <!-- Input com o número do território -->
   <input type="hidden" name="numeroTerritorio" value="<?=$territorio?>">
+  <input type="hidden" name="userId" value="<?=$userId?>">
   <button type="submit" class="btn btn-primary">Registrar</button>
 </form>
 </div>

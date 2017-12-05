@@ -33,8 +33,8 @@ function buscaTerritorioImg($conexao,$territorio){
 
 }
 
-function atualizaRegistro($conexao,$numeroTerritorio,$data_inicio,$data_fim,$obs,$dirigente){
-  $query = "INSERT INTO territorios (numero_territorio, data_inicio, data_fim, obs, dirigente) VALUES ($numeroTerritorio,'{$data_inicio}','{$data_fim}','{$obs}','{$dirigente}')";
+function atualizaRegistro($conexao,$numeroTerritorio,$data_inicio,$data_fim,$obs,$dirigente,$userId){
+  $query = "INSERT INTO territorios (numero_territorio, data_inicio, data_fim, obs, dirigente, userId) VALUES ($numeroTerritorio,'{$data_inicio}','{$data_fim}','{$obs}','{$dirigente}',{$userId})";
   return mysqli_query($conexao,$query);
 
 }

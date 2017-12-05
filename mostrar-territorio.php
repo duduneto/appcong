@@ -6,7 +6,7 @@ $territorio = $_COOKIE['cookieNumTer'];
 // Com o Cookie em "mãos" vamos fazer uma busca por todas as informações do territorio.
 // Que irá nos retornar um array que será colocado na variavel $territorioArray;
 $territorioArray = buscaTerritorio($conexao,$territorio);
-
+$userId = $_SESSION['userId'];
 ?>
 <div class="">
 <table class="table table-striped">
@@ -58,14 +58,20 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
       }
       ?>
 
-      <td>
-        <?php $id = $territorioA['id']; ?>
-        <form class="" action="remove-territorio.php" method="post">
-          <input type="hidden" name="id" value="<?=$id?>">
-          <button class="btn btn-danger" type="submit" name="button">Deletar</button>
-        </form>
-      </td>
-      <td></td>
+        <?php $id = $territorioA['id'];
+        if ($_SESSION['userAdm']==1 || ($territorioA['userId'] == $userId)) {?>
+          <td>
+            <form class="" action="remove-territorio.php" method="post">
+              <input type="hidden" name="id" value="<?=$id?>">
+              <button class="btn btn-danger" type="submit" name="button">Deletar</button>
+            </form>
+          </td>
+        <?php
+        }
+        ?>
+
+        <td></td>
+
 
     </tr>
   <?php

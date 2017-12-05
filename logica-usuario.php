@@ -38,5 +38,8 @@ function logout(){
 function setSessionAdm($valorAdm){
   $_SESSION['userAdm']=$valorAdm;
 }
+function setSessionUserId($valorId){
+  $_SESSION['userId']=$valorId;
+}
 
 ?>

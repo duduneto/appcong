@@ -1,6 +1,4 @@
-<?php require_once('conecta.php'); ?>
-
-<?php
+<?php require_once('conecta.php');
 // O md5 é para criptografar a senha para não ser lida pelo header da página
 
 function buscaUsuario($conexao,$usuario,$senha){

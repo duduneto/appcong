@@ -1,8 +1,6 @@
-<?php require_once('banco-usuario.php'); ?>
-<?php require_once('conecta.php'); ?>
-<?php
+<?php require_once('banco-usuario.php');
+require_once('conecta.php');
 session_start();
-
 function loginError(){
   header("Location:form-login.php?login=false");
   die();

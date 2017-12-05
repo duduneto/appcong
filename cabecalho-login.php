@@ -26,10 +26,6 @@
           <li class="nav-item active"><a href="login-formulario.php" class="nav-link"></a></li>
         </ul>
       </div>
-      <div class="">
-        <form class="" action="deslogar.php" method="post">
-        <button class="nav-item active btn btn-secondary" type="submit" name="button">Logout</button>
-      </div>
       </form>
     </nav>
   </div>

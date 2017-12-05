@@ -25,6 +25,12 @@ function verificaUsuario(){
     }
 }
 
+function verificaAdm(){
+  if ($_SESSION['userAdm']!=1){
+    loginError();
+  }
+}
+
 function logout(){
   return session_destroy();
 }

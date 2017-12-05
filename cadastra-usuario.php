@@ -1,6 +1,6 @@
-<?php require_once('cabecalho.php');?>
-
-
+<?php require_once('cabecalho.php');
+verificaAdm();
+?>
 <form action="cria-usuario.php" method="post">
   <div class="form-group">
     <label for="inputUsuario">Usuário</label>

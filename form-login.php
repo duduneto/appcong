@@ -1,7 +1,7 @@
 <?php require_once("cabecalho-login.php"); ?>
 <?php require_once("mostra-alerta.php"); ?>
 
-
+<p class="text-success">Faça o Login</p>
 <form action="valida-usuario.php" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">Usuário</label>

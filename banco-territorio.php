@@ -11,7 +11,7 @@ function buscaTerritorio($conexao,$territorio){
 }
 
 function buscaTerritorioData($conexao){
-  $query = "SELECT * FROM ultimoreg ORDER BY SUBSTR( datareg, 7, 4), SUBSTR( datareg, 4, 2), SUBSTR( datareg, 1, 2) DESC";
+  $query = "SELECT * FROM ultimoreg ORDER BY SUBSTR( datareg, 7, 4), SUBSTR( datareg, 4, 2), SUBSTR( datareg, 1, 2) ASC";
   return  mysqli_query($conexao,$query);
 }
 

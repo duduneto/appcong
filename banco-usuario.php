@@ -17,4 +17,10 @@ function cadastraUsuario($conexao,$usuario,$senha,$nome,$adm){
   $query = "INSERT INTO usuarios (nome,idlogin,senha,adm) VALUES ('{$nome}','{$usuario}','{$senhaMd5}','{$adm}')";
   return mysqli_query($conexao,$query);
 }
+
+function findAllUsers($conexao){
+  $query = "SELECT * FROM usuarios";
+  $result = mysqli_query($conexao,$query);
+  return $result;
+}
 ?>

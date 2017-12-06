@@ -9,6 +9,7 @@ $territorioArray = buscaTerritorio($conexao,$territorio);
 $userId = $_SESSION['userId'];
 ?>
 <div class="">
+  <h1>Território No. <?=$territorio?></h1>
 <table class="table table-striped">
   <thead>
     <tr>

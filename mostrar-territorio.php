@@ -97,7 +97,7 @@ $territorio = $_COOKIE['cookieNumTer'];
 <div>
 
 <!-- Temos aqui um Botão Trigger que vai ativar o Modal -->
-  <button type="button" id="btnModal" class="btn btn-primary " data-toggle="modal" data-target="#meumodal" >
+  <button type="button" id="btnModal" class="btn btn-secondary" data-toggle="modal" data-target="#meumodal">
     Mostrar Território
   </button>
 
@@ -121,8 +121,7 @@ $territorio = $_COOKIE['cookieNumTer'];
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
-          <button type="button" class="btn btn-primary"> SAVE CHANGES</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>

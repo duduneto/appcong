@@ -6,6 +6,7 @@
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
 
 <script type="text/javascript" src="js/bancoterritorio.js"></script>
+<script type="text/javascript" src="js/usuarios.js"></script>
 <!--<script type="text/javascript" src="js/jquery.modal.min.js"></script>
 
 EXCLUIDOS Pois entram em Conflito com a Função Modal do Bootstrap!

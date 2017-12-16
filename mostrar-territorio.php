@@ -106,7 +106,7 @@ $territorio = $_COOKIE['cookieNumTer'];
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">Tem algo aqui</span></button>
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span></button>
           <h4 class="modal-title">Território <?= $territorio ?></h4>
         </div>
         <div class="modal-body">

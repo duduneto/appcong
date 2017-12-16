@@ -13,7 +13,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Senha">
   </div>
 
-  <button type="submit" class="btn btn-primary">Entrar</button>
+  <button type="submit" class="btn btn-success">Entrar</button>
 </form>
 
 <?php require_once('rodape.php'); ?>

@@ -3,7 +3,7 @@ function validaSenha(){
   senha2 = document.getElementById('senha2').value;
   if (senha1 != senha2) {
     alert("Senhas diferentes! Digite novamente");
-    $(#btnCadastra).click(function(e){
+    $('#btnCadastra').click(function(e){
       e.preventDefault();
     });
   }else{

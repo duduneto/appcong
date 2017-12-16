@@ -7,7 +7,7 @@ function desabilitaFim(){
   }
 }
  $(document).ready(function () {
-    $('.datas').mask('99-99-9999');
+    $('.datas').mask("99-99-9999");
    return false;
 
 });

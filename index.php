@@ -25,7 +25,7 @@ $territorioArray = buscaTerritorioData($conexao);
    -->
     <?php while ($territorioA = mysqli_fetch_array($territorioArray)){?>
 
-      <tr>
+      <tr onclick="location.href='cookear-territorio-index.php?numter=<?=$territorioA['numero_territorio']?>'">
         <td><?=$territorioA['numero_territorio']?></td>
         <!-- Esse pequeno IF é feito para tratar os territórios que não foram concluídos
               colocando um "Não Concluido" para todos que não tiveram o checkbox marcado como Concluido.

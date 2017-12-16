@@ -24,7 +24,7 @@ $territorioArray = buscaTerritorioData($conexao);
           Cara campo nessa array é utilizado para preencher o <ts>.
    -->
     <?php while ($territorioA = mysqli_fetch_array($territorioArray)){?>
-
+      <!-- O clique no item da tabela leva à pagina do territorio. -->
       <tr onclick="location.href='cookear-territorio-index.php?numter=<?=$territorioA['numero_territorio']?>'">
         <td><?=$territorioA['numero_territorio']?></td>
         <!-- Esse pequeno IF é feito para tratar os territórios que não foram concluídos

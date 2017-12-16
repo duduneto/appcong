@@ -11,3 +11,11 @@ function desabilitaFim(){
    return false;
 
 });
+function mostraModal(e,a){
+
+  document.getElementById('idParaDeletar').value = e;
+  $('#myModal').modal('show');
+  console.log(e);
+  console.log(a);
+  document.getElementById('iddir').innerHTML = a;
+};

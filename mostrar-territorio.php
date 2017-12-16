@@ -17,7 +17,7 @@ $userId = $_SESSION['userId'];
       <th>Data Inicio</th>
       <th>Data Término</th>
       <th>Observação</th>
-      <th>Dirigente</th>
+
 
 
 
@@ -29,7 +29,7 @@ $userId = $_SESSION['userId'];
     -->
     <?php while($territorioA = mysqli_fetch_array($territorioArray)){?>
 
-    <tr>
+    <tr onclick="mostraModal(<?=$territorioA['id']?>,'<?=$territorioA['dirigente']?>');">
 
       <td id="datainicio"><?= $territorioA['data_inicio'] ?></td>
       <?php if ($territorioA['data_fim']==0) {?>
@@ -42,7 +42,7 @@ $userId = $_SESSION['userId'];
       }
       ?>
       <td id="obs"><?= $territorioA['obs']?></td>
-      <td><?=$territorioA['dirigente']?></td>
+
 
       <?php if ($territorioA['data_fim']==0) {?>
         <td>
@@ -59,22 +59,42 @@ $userId = $_SESSION['userId'];
       }
       ?>
 
-        <?php $id = $territorioA['id'];
-        if ($_SESSION['userAdm']==1 || ($territorioA['userId'] == $userId)) {?>
-          <td>
-            <form class="" action="remove-territorio.php" method="post">
-              <input type="hidden" name="id" value="<?=$id?>">
-              <button class="btn btn-danger" type="submit" name="button">Deletar</button>
-            </form>
-          </td>
-        <?php
-        }
-        ?>
 
         <td></td>
 
 
     </tr>
+
+    <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Dirigente:</h5>
+          <p id="iddir"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <?php
+            if ($_SESSION['userAdm']==1 || ($territorioA['userId'] == $userId)) {?>
+              <form class="" action="remove-territorio.php" method="post">
+                <input id="idParaDeletar" type="hidden" name="id" value="<?=$id?>">
+                <button class="btn btn-danger float-right" type="submit" name="button">Deletar</button>
+              </form>
+              <?php
+            }
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <?php
   }#endforeach;
   ?>
@@ -127,4 +147,8 @@ $territorio = $_COOKIE['cookieNumTer'];
     </div>
   </div>
 </div>
+
 <?php require_once("rodape.php"); ?>
+<script type="text/javascript">
+
+</script>
